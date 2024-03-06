@@ -1,0 +1,19 @@
+@use "../abstracts/" as * ;
+@forward "./navlist";
+
+
+.container{
+    max-width: 1440px;
+    padding: 30px 35px;
+
+    @include tablet {
+        max-width: 720px;
+      }
+    
+      @include mobile {
+        padding: 0 15px;
+        max-width: inherit;
+      }
+}
+
+

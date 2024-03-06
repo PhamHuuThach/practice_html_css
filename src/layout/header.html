@@ -1,1 +1,39 @@
-
+<!-- Start header -->
+<header class="header-contaiter">
+  
+  
+    <div class="header-contaiter__logo ">
+      <span>WiSchool</span>
+      <figure class="header-contaiter__menu--icon">
+        <img src="../assets/icons/charm_menu-hamburger.svg" alt="" />
+      </figure>
+    </div>
+    <nav class="header-contaiter__menu">
+      <ul>
+        <include
+          src="./components/navlist.html"
+          locals='{
+                  "classList":"nav__item",
+                  "classLink":"nav__item-link",
+                      "list":["Home","Courses","Instuctors","Schedules","Contact Us"]
+              }'
+        >
+        </include>
+      </ul>
+    </nav>
+    <div class="header_container--user">
+      <figure class="header_container--user__search">
+        <img src="../assets/icons/bx_search.svg" alt="" />
+      </figure>
+      <button class="header_container--user--login">Login</button>
+      <button class="header_container--user--register">Register</button>
+      <figure class="header_container--user__menu">
+        <img
+        src="../assets/icons/carbon_user-avatar.svg"
+        alt=""
+      />
+      </figure>
+      
+    </div>
+  </header>
+  
