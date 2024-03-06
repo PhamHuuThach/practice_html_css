@@ -1,2 +1,23 @@
+@use "functions" as *;
+//reponsive
+$small:480px;
+$medium: 768px;
+$extra-large: 1440px;
+$desktop:$extra-large;
+$mobile: calc($small - 1px);
+$tablet: calc($medium - 1px);
+
+
+//color
+$backgroud-color-dominant:#09B451;
+$test-color-navitem:#404040;
+$background-lightmode:#EEEFF2;
+$text-color-secondary:#FFFFFF;
+
+//font
+$font-source: Source;
+$font-poppins: Poppins;
+
+
 
 
