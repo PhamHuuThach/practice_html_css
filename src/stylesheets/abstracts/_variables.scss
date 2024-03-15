@@ -6,6 +6,12 @@ $extra-large: 1440px;
 $desktop:$extra-large;
 $mobile: calc($small - 1px);
 $tablet: calc($medium - 1px);
+$backgroud-image-banner:linear-gradient(to right top, 
+rgb(238, 247, 238),rgb(255, 255, 255));
+$backgroud-line:#E4FFFF;
+$backgroud-iconperson:#E1FFEE;
+$backgroud-serviceitem:#DDFFFF;
+$background-color:#333333;
 
 
 //color
@@ -13,6 +19,7 @@ $backgroud-color-dominant:#09B451;
 $test-color-navitem:#404040;
 $background-lightmode:#EEEFF2;
 $text-color-secondary:#FFFFFF;
+
 
 //font
 $font-source: Source;

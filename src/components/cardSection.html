@@ -1,0 +1,39 @@
+<each loop="item in {{list}}">
+  <div class="card__item">
+    <div class="card__item--top">
+      <figure class="card__item--top-image">
+        <img
+          src="../assets/images/desktop/{{item.image}}.png"
+          alt="{{item.altname}}"
+        />
+      </figure>
+    </div>
+    <div class="card__item--middle">
+      <p class="card__item--middle-title">{{item.content}}</p>
+      <div class="card__item--middle-rate">
+        <figure class="rate--icon">
+          <img
+            src="../assets/icons/ant-design_star-outlined.svg"
+            alt="ant-design_star-outlined"
+          />
+          <figcaption class="rate--content">{{item.rate}}</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="card__item--bottom">
+      <div class="card__week-adherence">
+        <p class="card__week">{{item.weeks}} weeks</p>
+        <figure class="card__adherence">
+          <img
+            src="../assets/icons/ci_group-person.svg"
+            alt="ci_group-person"
+          />
+          <figcaption class="card__adherence--contennt">
+            {{item.adherence}} Students
+          </figcaption>
+        </figure>
+      </div>
+      <p class="card__price">{{item.price}}$</p>
+    </div>
+  </div>
+</each>
