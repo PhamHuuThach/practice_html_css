@@ -1,0 +1,10 @@
+<each loop="item in {{ list }}">
+  <figure class="slider-wrapper--item">
+    <img
+      class="slider-wrapper--item-image"
+      src="../assets/images/desktop/{{ item.images }}.png"
+      alt="{{item.altname}}"
+    />
+    <figcaption class="slider-wrapper--item-title">{{item.content}}</figcaption>
+  </figure>
+</each>

@@ -1,1 +1,39 @@
-
+<main class="main-container">
+  <section class="cartegories">
+    <div class="categories__heading">
+      <p class="categories__heading--title">
+        Choose favourite course from top cartegories
+      </p>
+      <p class="categories__heading--seeall" href="">See all</p>
+    </div>
+    <div class="slider-wrapper--cartegories">
+      <div class="slider-wrapper--list">
+        <include
+          src="./components/cartegoriesitem.html"
+          locals='{
+          "list": 
+          [ {"images":"marketing","content":"Marketing","altname":"Marketing"},
+            {"images":"marketing","content":"Design","altname":"Design"},
+            {"images":"marketing","content":"Programming","altname":"Programming"},
+            {"images":"marketing","content":"Technology","altname":"Technology"}]
+        }'
+        >
+        </include>
+      </div>
+      <div class="slider">
+        <figure class="slider--onclick">
+          <img
+            src="../assets/icons/ic_round-less-than.svg"
+            alt="ic_round-less-than"
+          />
+        </figure>
+        <figure class="slider--onclick">
+          <img
+            src="../assets/icons/ic_round-right-than.svg"
+            alt="ic_round-right-than"
+          />
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
