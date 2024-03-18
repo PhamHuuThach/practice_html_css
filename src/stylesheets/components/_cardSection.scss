@@ -1,0 +1,73 @@
+@use "../abstracts" as *;
+.cards{
+    @include flex($wrap:wrap);
+    gap: 32px;
+    .card__item{
+        max-width: 392px;
+        background: #FFFFFF;
+       .card__item--top{
+        margin: 10px 0;
+            .card__item--top-image{
+                img{
+                    border-radius: 10px 10px 0px 0px ;
+                }
+                
+        }
+       } 
+       .card__item--middle{
+        @include flex($justify:space-between);
+        margin: 0 23px; 
+        .card__item--middle-title{
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 36px;
+            color: $background-color;
+            padding: 0px 5px;
+        }
+        .card__item--middle-rate{
+            .rate--icon{
+                @include flex();
+                gap: 6px;
+                .rate--content{
+                    padding: 10px 0;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+            }
+        }
+       }
+       .card__item--bottom{
+        @include flex($justify:space-between);
+        margin: 0 23px;
+        .card__week-adherence{
+            @include flex($justify:space-between,$align:center);
+            gap: 16px;
+            .card__week{
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+            .card__adherence{
+                @include flex($justify:space-between);
+                .card__adherence--contennt{
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                }
+            }
+        }
+        .card__price{
+            color: $backgroud-color-dominant;
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+        }
+       }
+    }
+}

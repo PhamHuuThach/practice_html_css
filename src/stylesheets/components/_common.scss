@@ -1,19 +1,18 @@
 @use "../abstracts/" as * ;
 @forward "./navlist";
-
+@forward "./cardSection";
 
 .container{
     max-width: 1440px;
-    padding: 30px 35px;
+    padding: 30px 100px;
+    margin: 0 auto;
 
     @include tablet {
-        max-width: 720px;
+        max-width: 768px;
       }
     
       @include mobile {
         padding: 0 15px;
-        max-width: inherit;
+        max-width: 480;
       }
 }
-
-
