@@ -1,0 +1,143 @@
+@use "../../abstracts/" as *;
+.banner-service{
+    background: $text-color-secondary;
+    margin: 0 auto;
+    &--top{
+        padding: 20px;
+        background-image: $backgroud-image-banner;
+        border-radius: pxToRem(50);
+        position: relative;
+        .banner__line{
+            position: absolute;
+            border-top-right-radius:pxToRem(50);
+            border-bottom-right-radius: pxToRem(50);
+            min-width:107px;
+            min-height: 96.8%;
+            background: $backgroud-line;
+            right: 0;
+        }
+        .banner__education{
+            @include flex($justify:space-between,$wrap:wrap);
+            &--content{
+                flex: 1;
+                padding: 65px;
+                z-index: 1;
+                &--capital{
+                    font-family: Poppins;
+                    font-size: 60px;
+                    line-height: 90px;
+                    font-weight: 700;
+                    margin: 20px auto;
+                    &--dots{
+                        width: 10px;
+                        height: 10px;
+                        background:$test-color-navitem;
+                        border-radius: 50%;
+                        display: inline-block;
+                    }
+                }
+                &--green{
+                    color: $backgroud-color-dominant;
+                }
+                &--btn{
+                    padding: 20px 45px;
+                    border-radius: 5px;
+                    background: $backgroud-color-dominant;
+                    border: none;
+                    font-family: Source;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    color: $text-color-secondary;
+                }
+                &--btn:hover{
+                    background-color: $test-color-navitem;
+                    cursor: pointer;
+                }
+            }
+            &--image{
+                margin: 0 20px;
+                padding: 25px 0px;
+                position: relative;
+                img{
+                    border-radius: 5%;
+                }
+            }
+            &--position--instructors{
+                max-width: 262px;
+                background: $text-color-secondary;
+                position: absolute;
+                top: 250px;
+                left: -150px;
+                border-radius: 10px;
+                p{  padding: 10px 30px;
+                    font-family: Poppins;
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-weight: 600;
+                    word-wrap: break-word;
+                    text-align: center;
+                    span{
+                        color: $backgroud-color-dominant;
+                    }
+                }
+                &--johnmark{
+                    display: flex;
+                    justify-content: start;
+                    padding: 0px 35px;
+                    .johnmark__item{
+                        position: relative;
+                        img{
+                            max-width: 60px;
+                            min-height: 60px;
+                            border-radius: 50%;
+                            border: 5px solid $text-color-secondary;
+                        }
+                    }
+                    .johnmark__item:nth-child(2){
+                        left: -25px;
+                    }
+                    .johnmark__item:nth-child(3){
+                        left: -50px;
+                    }
+                    .johnmark__item:nth-child(4){
+                        left: -75px;
+                    }
+                    .johnmark__item:nth-child(5){
+                        left: -100px;
+                    }
+                }
+            }
+            &--position--amazing{
+                max-width: 129px;
+                background:$text-color-secondary;
+                position: absolute;
+                top: 338px;
+                left: 328px;
+                text-align: center;
+                border-radius: 6.89px;
+                &--icons-person{
+                    background: $backgroud-iconperson;
+                    border-radius: 50%;
+                    margin: 10px 50px;
+                    img{
+                       padding: 5px;
+                    }
+                }
+                h2{
+                    color:$backgroud-color-dominant;
+                    font-family: Poppins;
+                    font-size: 24px;
+                    line-height: 38px;
+                    font-weight: 600;
+                    }
+                p{  margin: 10px 10px;
+                    font-family: Poppins;
+                    font-size: 12px;
+                    line-height: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
