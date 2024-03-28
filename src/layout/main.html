@@ -10,22 +10,20 @@
             Any Means Necessary
             <span class="banner__education--content--dots"></span>
           </p>
-          <!-- <include
-            src="./components/buttonbanner.html"
-            locals='{
-              "btnvalue":["Get Started"],
-              "classbtn":"banner__education--content--btn"
-            }'
-          >
-          </include> -->
           <button class="banner__education--content--btn">Get Started</button>
         </div>
         <div class="banner__education--image">
-          <figure>
+          <picture>
+            <source
+              srcset="../assets/images/mobile/banner-1.png"
+              media="(max-width:480px)"
+            />
             <img src="../assets/images/desktop/banner-1.png" alt="" />
-          </figure>
+          </picture>
           <div class="banner__education--position--instructors">
-            <p>Learn from best <span>instructors</span> around the globe</p>
+            <p class="banner__education--position--instructors--content">
+              Learn from best <span>instructors</span> around the globe
+            </p>
             <div class="banner__education--position--instructors--johnmark">
               <include
                 src="./components/johnmarkimage.html"
@@ -39,14 +37,29 @@
             </div>
           </div>
           <div class="banner__education--position--amazing">
-            <div class="banner__education--position--amazing--icons-person">
+            <figure class="banner__education--position--amazing--icons-person">
               <img src="../assets/icons/bi_person.svg" alt="bi_person" />
-            </div>
-            <h2>15k</h2>
-            <p>Amazing students around the globe</p>
+            </figure>
+            <p class="banner__education--position--amazing--content">
+              <span>15k</span> Amazing students around the globe
+            </p>
           </div>
         </div>
       </div>
+    </div>
+    <div class="banner-service--bottom">
+      <include
+        src="./components/serviceitem.html"
+        locals='{
+          "list": 
+          [ {"icon":"arcticons_math","content":"Problem Solving","altname":"arcticons_math"},
+            {"icon":"Group","content":"Live chat","altname":"Group"},
+            {"icon":"ci_group","content":"Group Reading","altname":"ci_group"},
+            {"icon":"bi_book","content":"10k Courses","altname":"bi_book"},
+            {"icon":"cib_skillshare","content":"Hand-on activities","altname":"cib_skillshare"}]
+        }'
+      >
+      </include>
     </div>
   </section>
 </main>

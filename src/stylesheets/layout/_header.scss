@@ -1,113 +1,120 @@
 @use "../abstracts/" as *;
-.header-contaiter{
-    @include flex($justify: space-between, $align: center);
-    &__logo{
-        position: relative;
-        span{
-            font-family:$font-source;
-            font-weight: 600;
-            font-size: 32.8px;
-            margin: 0 10px;
-        }
-
+.header-contaiter {
+  @include flex($justify: space-between, $align: center);
+  &__logo {
+    position: relative;
+    span {
+      font-family: $font-source;
+      font-weight: 600;
+      font-size: 32.8px;
+      margin: 0 10px;
     }
-    &__logo::before{
-        content: '';
-        width: 6px;
-        height: 6px;
-        background:$backgroud-color-dominant;
-        border-radius: 50%;
-        position: absolute;
-        right: 42px;
-        top: 4px;
-       }
-       &__logo::after{
-        content: '';
-        width: 6px;
-        height: 6px;
-        background:$backgroud-color-dominant;
-        border-radius: 50%;
-        position: absolute;
-        right: 24px;
-        top: 4px;
+  }
+  &__logo::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: $backgroud-color-dominant;
+    border-radius: 50%;
+    position: absolute;
+    right: 42px;
+    top: 4px;
+  }
+  &__logo::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: $backgroud-color-dominant;
+    border-radius: 50%;
+    position: absolute;
+    right: 24px;
+    top: 4px;
+  }
 
-       }
-
-       &__menu--icon{
-        display: none;
-        @include mobile {
-            display: block;
-
-        }
-        @include tablet {
-            display: block;
-
-        }
-       }
-       @include tablet {
-        &__logo{
-            @include flex(
-                $direction:row-reverse
-                ); 
-                
-        }
-        }
-        @include mobile {
-            &__logo{
-                @include flex(
-                    $direction:row-reverse);   
-            }
-       }
+  &__menu--icon {
+    display: none;
+    @include mobile {
+      display: block;
+    }
+    @include tablet {
+      display: block;
+    }
+  }
+  @include tablet {
+    &__logo {
+      @include flex($direction: row-reverse);
+    }
+  }
+  @include mobile {
+    &__logo {
+      @include flex($direction: row-reverse);
+    }
+  }
 }
-nav{
-    @include mobile{
-        display: none;
-    }
-    @include tablet{
-        display: none;
-    }
-    
+nav {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
 }
-.header_container--user{
-    @include flex();
-    gap: 4;
-    &__search{
-        padding: 10px 10px;
-        @include mobile{
-            display: none;
-        }
-        @include tablet{
-            display: none;
-        }
+.header_container--user {
+  @include flex();
+  gap: 4;
+  &__search {
+    padding: 10px 10px;
+    @include mobile {
+      display: none;
     }
-    button{
-        padding: 12px 24px;
-        cursor: pointer;
-        border: none;
-        @include mobile{
-            display: none;
-        }
-        @include tablet{
-            display: none;
-        }
+    @include tablet {
+      display: none;
     }
-    &--login{
-        background-color: transparent;
-        color: $backgroud-color-dominant;;
+  }
+  button {
+    padding: 12px 24px;
+    cursor: pointer;
+    border: none;
+    @include mobile {
+      display: none;
     }
-    &--register{
-        background-color: $backgroud-color-dominant;
-        color: #fff;
-        border-radius: 5px;
+    @include tablet {
+      display: none;
     }
-   
-    &__menu{
-        display: none;
-        @include mobile{
-            display: block;
-        }
-        @include tablet{
-            display: block;
-        }
+  }
+  &--login {
+    padding: 8px 18px 8px 18px;
+    background-color: transparent;
+    color: $backgroud-color-dominant;
+    font-family: Source;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20.11px;
+  }
+  &--login:hover {
+    border-radius: 3px;
+    background: $test-color-navitem;
+  }
+  &--register {
+    padding: 12px 24px 12px 24px;
+    background-color: $backgroud-color-dominant;
+    color: $text-color-secondary;
+    border-radius: 5px;
+    font-family: Source;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  &--register:hover {
+    background: $test-color-navitem;
+  }
+  &__menu {
+    display: none;
+    @include mobile {
+      display: block;
     }
+    @include tablet {
+      display: block;
+    }
+  }
 }

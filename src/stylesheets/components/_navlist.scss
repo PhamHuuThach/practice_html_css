@@ -1,19 +1,27 @@
 @use "../abstracts" as *;
-
-.header-contaiter__menu{
-    ul{
-        @include flex($wrap: 10px);
-        flex-wrap: wrap;
-        .classList{
-            padding: 10px 15px;
-            letter-spacing: 1px;
-            cursor: pointer;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            color: $test-color-navitem;
-        }
-        .classList:hover {
-            background-color: $backgroud-color-dominant;
-          }
+.header-contaiter__menu {
+  ul {
+    @include flex($wrap: 10px);
+    flex-wrap: wrap;
+    gap: 24px;
+    .classList {
+      padding: 0 15px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      a {
+        color: $test-color-navitem;
+        font-family: Source;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
     }
+    .classList:hover {
+      background-color: $backgroud-color-dominant;
+    }
+  }
 }

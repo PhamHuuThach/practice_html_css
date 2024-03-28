@@ -1,0 +1,149 @@
+@use "../../abstracts/" as *;
+
+.banner-service--bottom {
+  margin-top: 30px;
+  @include flex($justify: space-between, $wrap: wrap);
+  gap: 48px;
+
+  @include tablet {
+    display: grid;
+    margin-right: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-right: 20px;
+    gap: 16px;
+    position: absolute;
+  }
+
+  .service__item {
+    background: $backgroud-serviceitem;
+    border-radius: 5px;
+    padding: 5px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 0.5fr);
+
+      &:nth-child(1) {
+        grid-column: span 1 / span 2;
+      }
+
+      &:nth-child(2) {
+        grid-column: span 1 / span 2;
+      }
+
+      &:nth-child(3) {
+        grid-column: span 1 / span 2;
+      }
+
+      &:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      &:nth-child(5) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(4, 1fr);
+
+      &:nth-child(1) {
+        grid-column: span 2 / span 2;
+      }
+
+      &:nth-child(2) {
+        grid-column: span 2 / span 2;
+      }
+
+      &:nth-child(3) {
+        grid-column: span 2 / span 2;
+      }
+
+      &:nth-child(4) {
+        grid-column: span 2 / span 2;
+      }
+
+      &:nth-child(5) {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+    }
+
+    @include mobile {
+      border-radius: 4.47px;
+      padding: 5;
+    }
+
+    &--image {
+      float: left;
+      background: $backgroud-color-dominant;
+      border-radius: 50%;
+      margin: 5px 10px;
+      max-width: 45px;
+      min-height: 45px;
+
+      @include tablet {
+        margin: 10px auto;
+        max-width: 40.79px;
+        min-height: 40.79px;
+      }
+
+      @include mobile {
+        margin: 0 auto;
+        max-width: 35.79px;
+        max-height: 35.79px;
+      }
+
+      img {
+        padding: 8px;
+        margin: auto;
+
+        @include tablet {
+          padding: 10px 7px;
+        }
+
+        @include mobile {
+          padding: 10px 5px;
+        }
+      }
+    }
+
+    &--content {
+      padding: 13px;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      overflow: hidden;
+
+      @include tablet {
+        margin: 10px;
+        padding: 10px;
+        font-family: Poppins;
+        font-size: 14.32px;
+        font-weight: 400;
+        line-height: 21.48px;
+        text-align: left;
+      }
+
+      @include mobile {
+        padding: 10px;
+        font-family: Poppins;
+        font-size: 14.32px;
+        font-weight: 400;
+        line-height: 21.48px;
+        text-align: left;
+      }
+    }
+  }
+}

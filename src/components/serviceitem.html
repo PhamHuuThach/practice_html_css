@@ -1,0 +1,8 @@
+<each loop="item in {{ list }}">
+  <div class="service__item">
+    <figure class="service__item--image">
+      <img src="../assets/icons/{{ item.icon}}.svg" alt="{{item.altname}}" />
+    </figure>
+    <p class="service__item--content">{{ item.content }}</p>
+  </div>
+</each>
